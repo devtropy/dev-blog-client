@@ -1,27 +1,25 @@
 ---
-id: 5
-title: "Build a blog using Markdown files with Gridsome and Vuetify"
-strapline: "In this post, we will build a Blog using Gridsome, MarkDown files and Vuetify"
+title: Build a blog using Markdown files with Gridsome and Vuetify
+slug: build-a-gridsome-blog
 date: 2020-09-14
-author: "Vinícius Arré"
-slug: "build-a-gridsome-blog"
-published: false
+series: Archive
+summary: In this post, we will build a Blog using Gridsome, MarkDown files and Vuetify
+draft: true
 ---
 
+<!-- Unfinished in the old blog (published: false): stops at "Implementing a Layout". Move to posts/ once finished. -->
+
 ## Introduction
-<br/>
+
 If you haven't yet heard of [Gridsome](https://gridsome.org/) , it's a Vue.js-based Jamstack frame work which generates blazing fast static-sites. It is very useful for consuming RESTFul or GraphQL requests and statically show them. It also is a great way to be a headless CMS, for several other clients. 
-<br><br>
 
 ## Part 1: Installing and setup
-<br>
+
 Note: if you'd like to skip this part, you can find a template which already sets up the Markdown file configuration as well as Vuetify with Gridsome [here](https://github.com/viniciusarre/gridsome-blog-template).
-<br>
+
 If you are using NPM, simply run:
 
-
 `npm install -g @gridsome/cli`
-<!-- <highlightjs autodetect code="npm install -g @gridsome/cli"/> -->
 
 Then, we need create a new project, let's call this blog `markdown-blog`. To do so, simply run:
 
@@ -35,7 +33,7 @@ We will need to install and configure the plugin for handling the Markdown files
 
 You can install them by running:
 
-` npm install --save @gridsome/source-filesystem @gridsome/transformer-remark`
+`npm install --save @gridsome/source-filesystem @gridsome/transformer-remark`
 
 Then, you will need to install Vuetify and the MDI fonts... you can do so by running:
 
@@ -45,13 +43,11 @@ Furthermore, a few development-only dependencies will be needed in order to tran
 
 `npm install --save-dev sass-loader sass vuetify-loader webpack-node-externals`
 
-<br>
-
 ## Configuring Vuetify
 
-In order to configure Vuetify, you need to edit the ´gridsome.server.js´ file and assure that you import and properly reference Vuetify so that it gets properly transpiled into the final static gridsome page. Make it looks something like this:
+In order to configure Vuetify, you need to edit the `gridsome.server.js` file and assure that you import and properly reference Vuetify so that it gets properly transpiled into the final static gridsome page. Make it looks something like this:
 
-```
+```js
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
@@ -78,7 +74,7 @@ At last, import Vuetify and its dependencies on `main.js`. By default, there's t
    `import Vuetify from "vuetify"`
 2. Then, add the initialization of it as well as its styling reference to the function. It must look like something similar to this:
 
-```
+```js
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
@@ -96,7 +92,6 @@ export default function(Vue, { router, appOptions, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900',
   });
-
 
   const opts = {
     icons: {
@@ -123,14 +118,11 @@ export default function(Vue, { router, appOptions, head, isClient }) {
 }
 ```
 
-``
-<br>
-
 ## Configuring the plugins
 
-You will need to edit the file ´gridsome.config.js` in order to use the plugins we installed, as well as passing options and other parameters to them. Make sure to push this to your ´plugins´ Array:
+You will need to edit the file `gridsome.config.js` in order to use the plugins we installed, as well as passing options and other parameters to them. Make sure to push this to your `plugins` Array:
 
-```
+```js
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -147,23 +139,8 @@ You will need to edit the file ´gridsome.config.js` in order to use the plugins
 ```
 This configures the folder and type of file which will be used and then add a typeName to handle this type of data (more on this later). As you can see, the route will look for content on a given slug, therefore, when creating the posts, we will be redirected to the given slug so that that post can be rendered.
 
-
 ## Part 2: Implementing a layout and writing the first Blog Post file
-<br>
 
 ## Implementing a Layout 
 
 We will create a two column design for the blog. You can see the design file by navigating to `src/Layouts/Default.vue`. You can add this in order to get started, but feel free to get more creative!
-
-```
-
-
-
-
-
-```
-
-
-
-
- 

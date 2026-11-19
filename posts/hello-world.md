@@ -1,23 +1,21 @@
 ---
-id: 1
-title: "Hello World!"
-strapline: "A bit more about me, the amazing journey that brought me here and what this is blog is all about..."
+title: Hello World!
+slug: hello-world
 date: 2018-08-18
-author: "Vinícius Arré"
-slug: "hello-world"
-published: true
-archive: true
+series: Archive
+summary: A bit more about me, the amazing journey that brought me here and what this is blog is all about...
+draft: false
 ---
 
-### What is this blog about?
-<br>
+> This post was originally written in 2018, in an older version of the blog and has been republished here, since I think it can bring value to fellow developers to see the progress of my writings as well as my progress as a developer. I hope you enjoy it!
+
+## What is this blog about?
 
 Hello kind reader! I have considered creating this blog for over a month now, in order to be a way to document and start a discussion about my own journey as a Full Stack Developer. Here I will share some anecdotal evidence and comments on my learning and experience so far. I find writing as one of the best ways to express myself, in my teenage years, I have published two short stories in two different Brazilian anthologies and since then, I haven´t written much… which is something I miss.
 
 Hopefully, if you read through, it will help you give some insights about who I am, where I´m from and what I do. With that said, I think that, the best way to start is to talk a bit about myself.
 
-### Who am I ?
-<br>
+## Who am I ?
 
 Hi, my name is Vinícius, I'm a 23-year-old Web Developer from Brazil. I grew up playing in an orchestra, having played the Trumpet and the French Horn for nine years, (from 9 to 18 years old).  It was a wonderful experience, since it taught me teamwork and collaborating with others from an early age. Being in concert, for instance, is one of the most direct forms of teamwork I have experienced. There were around 40 musicians playing together, in synchrony with each other and at the same time. Everyone playing an important role towards what other people had been listening. Besides that, I recorded two CDs with them, one commemorating the city’s anniversary, and the other containing mostly original music.
 
